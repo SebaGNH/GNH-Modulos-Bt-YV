@@ -1,8 +1,19 @@
 import React from 'react'
+import { ReactQuery } from './components'
+import { QueryClientProvider, QueryClient } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools';
+import './Estilos.css'
+
+const queryClient = new QueryClient();
 
 const AppGarageDeIdeas = () => {
   return (
-    <div>AppGarageDeIdeas</div>
+    <QueryClientProvider client={queryClient}>
+    <div className="App">
+      <ReactQuery/>
+    </div>
+    <ReactQueryDevtools/>
+  </QueryClientProvider>
   )
 }
 
