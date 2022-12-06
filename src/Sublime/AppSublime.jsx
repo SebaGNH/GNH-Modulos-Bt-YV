@@ -1,10 +1,10 @@
 import React,{Fragment} from 'react'
-import AppGarageDeIdeas from './ReactQuery/GarageDeIdeas/AppGarageDeIdeas'
+import AppReactQuery from './ReactQuery/AppReactQuery'
 
 const AppSublime = () => {
   return (
     <Fragment>
-      <AppGarageDeIdeas/>
+      <AppReactQuery/>
     </Fragment>
   )
 }

@@ -21,16 +21,18 @@ export const ReactQuery = () => {
     return <p>Error</p>
   }
   return (
-    <Fragment>
-      <h2>Lista de Productos</h2>
-      <div className="products">
-        {data.map( product => (
-          <ProductCard
-            key={product.id}
-            product={product}/>
-        ))}
+    <div className='container'>
+    <div className="row">    
+        <h2>Lista de Productos</h2>
+        <div className="products">
+          {data.map( product => (
+            <ProductCard
+              key={product.id}
+              product={product}/>
+          ))}
+        </div>
       </div>
 
-    </Fragment>
+    </div>
   )
 }

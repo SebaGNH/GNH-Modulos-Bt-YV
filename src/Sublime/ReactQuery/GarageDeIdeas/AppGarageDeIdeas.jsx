@@ -2,7 +2,7 @@ import React from 'react'
 import { ReactQuery } from './components'
 import { QueryClientProvider, QueryClient } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools';
-import './Estilos.css'
+import './AppGarageDeIdeas.css'
 
 const queryClient = new QueryClient();
 
