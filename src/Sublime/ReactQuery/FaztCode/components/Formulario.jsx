@@ -1,11 +1,42 @@
 import React from 'react'
+import { useMutation, useQueryClient } from 'react-query'
+import { createProduct } from '../api/productsAPI';
 
 export const Formulario = () => {
 
+  const queryClient = useQueryClient(); //recarga y muestra los nuevos
+
+  //Agregar Productos
+  const addProductMutation =  useMutation({
+    mutationFn: createProduct,
+    onSuccess: () => { //Ejecuta una función una vez añadido
+      console.log("producto Añadido")
+      
+      //le indicamos que api debe llamar nuevamente
+      queryClient.invalidateQueries('products');
+
+    }
+  });
+
+  //onSubmit
   const onSubmit = (e) =>{
     e.preventDefault();
-    console.log("submit pulsado")
+
+    //Formulario en javascript para obtener los valores
+    const formData = new FormData(e.target);
+    //console.log(formData) //FormData(3) { name → "", description → "", price → "" }
+
+    //Convertimos a objeto "extraemos los valores"
+    const productos = Object.fromEntries(formData);
+    //console.log(productos) //FormData(3) { name → "", description → "", price → "" }
+    addProductMutation.mutate({
+      ...productos,
+      inStock: true
+    })
+
   }
+
+  
 
   return (
     <div className='row my-3'>

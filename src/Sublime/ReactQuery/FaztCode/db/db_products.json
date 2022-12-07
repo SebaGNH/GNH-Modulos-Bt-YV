@@ -1,5 +1,5 @@
 {
-  "products":[
+  "products": [
     {
       "name": "laptop",
       "price": "1000",
@@ -27,6 +27,54 @@
       "description": "ooooooooooooo",
       "inStock": true,
       "id": 4
+    },
+    {
+      "name": "afa",
+      "description": "afaf",
+      "price": "6565",
+      "id": 5
+    },
+    {
+      "name": "cac",
+      "description": "caca",
+      "price": "957",
+      "inStock": true,
+      "id": 6
+    },
+    {
+      "name": "fa",
+      "description": "asdf",
+      "price": "65",
+      "inStock": true,
+      "id": 7
+    },
+    {
+      "name": "234",
+      "description": "23423",
+      "price": "234",
+      "inStock": true,
+      "id": 8
+    },
+    {
+      "name": "ggggggggggg",
+      "description": "ggggggggggggg",
+      "price": "95",
+      "inStock": true,
+      "id": 9
+    },
+    {
+      "name": "cccc",
+      "description": "ccc",
+      "price": "4",
+      "inStock": true,
+      "id": 10
+    },
+    {
+      "name": "ppp",
+      "description": "ppp",
+      "price": "999",
+      "inStock": true,
+      "id": 11
     }
   ]
 }
