@@ -3,28 +3,28 @@
     {
       "name": "laptop",
       "price": "1000",
-      "description": "asdadad",
+      "description": "aaaaaaaaaaaaaa",
       "inStock": true,
       "id": 1
     },
     {
       "name": "pc",
       "price": "1000",
-      "description": "asdsad",
+      "description": "eeeeeeeeeeeeeeeeee",
       "inStock": true,
       "id": 2
     },
     {
       "name": "adsad",
       "price": "12123",
-      "description": "asdasdad",
+      "description": "iiiiiiiiiiiiii",
       "inStock": true,
       "id": 3
     },
     {
       "name": "new",
       "price": "12321",
-      "description": "asdasdad new",
+      "description": "ooooooooooooo",
       "inStock": true,
       "id": 4
     }

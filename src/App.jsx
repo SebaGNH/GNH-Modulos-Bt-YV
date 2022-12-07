@@ -1,12 +1,12 @@
-import React,{Fragment} from 'react'
+import React from 'react'
 import AppSublime from './Sublime/AppSublime'
 
 
 const App = () => {
   return (
-    <Fragment>
+    <div className='container'>
       <AppSublime/>
-    </Fragment>
+    </div>
   )
 }
 
