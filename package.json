@@ -6,10 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "backend": "json-server --watch src/Sublime/ReactQuery/FaztCode/db/db_products.json --port 5000"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.19.1",
+    "@tanstack/react-query-devtools": "^4.19.1",
+    "axios": "^1.2.1",
+    "json-server": "^0.17.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-query": "^3.39.2"
