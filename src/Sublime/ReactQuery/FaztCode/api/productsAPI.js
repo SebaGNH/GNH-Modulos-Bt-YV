@@ -17,7 +17,12 @@ export const createProduct = (products) => {
 }
 
 //Delete product
-
 export const deleteProduct = id => {
   productsAPI.delete(`/products/${id}`)
+}
+
+
+//Edit Product
+export const updateProduct = (product) => {
+  productsAPI.put(`/products/${product.id}`, product)
 }

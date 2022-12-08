@@ -1,13 +1,21 @@
 import { useMutation, useQueryClient } from "react-query"
-import { deleteProduct } from "../api/productsAPI"
+import { deleteProduct, updateProduct } from "../api/productsAPI"
 
 
 
 export const Products = ({product}) => {
 
   const queryClient = useQueryClient();
+
   const deleteProductMutation = useMutation({
     mutationFn: deleteProduct,
+    onSuccess: () => {
+      queryClient.invalidateQueries('products'); //refresca ,pero no me funciona
+    }
+  });
+
+  const updateProductMutation = useMutation({
+    mutationFn: updateProduct,
     onSuccess: () => {
       queryClient.invalidateQueries('products'); //refresca ,pero no me funciona
     }
@@ -28,8 +36,17 @@ export const Products = ({product}) => {
         >Delete</button>
 
         <div className="">
-          <input type="checkbox" />
-          <label htmlFor="">in Stock</label>
+          <input 
+            type="checkbox" 
+            id={product.id}
+            checked={product.inStock}
+            onChange={ e => { 
+            updateProductMutation.mutate({
+              ...product,
+              inStock: e.target.checked
+            })
+          }} />
+          <label htmlFor={product.id}>in Stock</label>
         </div>
       </div>
     </div>
