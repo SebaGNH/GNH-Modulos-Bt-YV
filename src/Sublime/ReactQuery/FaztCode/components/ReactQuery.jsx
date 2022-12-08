@@ -13,7 +13,8 @@ export const ReactQuery = () => {
   //data es un arreglo de productos con":" lo renombramos
   const {isLoading, data, isError, error} = useQuery({
     queryKey: ['products'],
-    queryFn: getProducts
+    queryFn: getProducts,
+    select: data => data.sort(( a, b ) => a.id < b.id)
   });
 
   

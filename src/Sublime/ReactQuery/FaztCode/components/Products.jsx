@@ -1,6 +1,18 @@
-import React from 'react'
+import { useMutation, useQueryClient } from "react-query"
+import { deleteProduct } from "../api/productsAPI"
+
+
 
 export const Products = ({product}) => {
+
+  const queryClient = useQueryClient();
+  const deleteProductMutation = useMutation({
+    mutationFn: deleteProduct,
+    onSuccess: () => {
+      queryClient.invalidateQueries('products'); //refresca ,pero no me funciona
+    }
+  });
+
   return (
     <div className="card text-white bg-secondary mb-3" style={{ width: '18rem' }} >
     <div className="card-header text-center">{product.id}</div>
@@ -10,7 +22,10 @@ export const Products = ({product}) => {
       <p>{product.price}</p>
 
       <div className="card-footer d-flex justify-content-around">
-        <button className='btn btn-danger'>Delete</button>
+        <button 
+          className='btn btn-danger'
+          onClick={()=> deleteProductMutation.mutate(product.id)}
+        >Delete</button>
 
         <div className="">
           <input type="checkbox" />

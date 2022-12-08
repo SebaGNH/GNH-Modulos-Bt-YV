@@ -11,6 +11,13 @@ export const getProducts = async () => {
   return res.data;
 }
 
-export const createProduct = (product) => {
-  productsAPI.post("/products", product)
+//Add new product "post"
+export const createProduct = (products) => {
+  productsAPI.post("/products", products)
+}
+
+//Delete product
+
+export const deleteProduct = id => {
+  productsAPI.delete(`/products/${id}`)
 }

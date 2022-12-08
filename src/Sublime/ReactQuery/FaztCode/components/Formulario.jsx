@@ -10,7 +10,7 @@ export const Formulario = () => {
   const addProductMutation =  useMutation({
     mutationFn: createProduct,
     onSuccess: () => { //Ejecuta una función una vez añadido
-      console.log("producto Añadido")
+      //console.log("producto Añadido")
       
       //le indicamos que api debe llamar nuevamente
       queryClient.invalidateQueries('products');
